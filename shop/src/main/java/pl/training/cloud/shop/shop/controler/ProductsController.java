@@ -34,7 +34,7 @@ public class ProductsController {
     public PageDto<ProductDto> getUsers(
             @RequestParam(required = false, defaultValue = "0", name = "pageNumber") int pageNumber,
             @RequestParam(required = false, defaultValue = "10", name = "pageSize") int pageSize) {
-        ResultPage<Product> resultPage = productsService.getUsers(pageNumber, pageSize);
+        ResultPage<Product> resultPage = productsService.getProducts(pageNumber, pageSize);
         List<ProductDto> productsDtos = mapper.map(resultPage.getContent(), ProductDto.class);
         return new PageDto<>(productsDtos, resultPage.getPageNumber(), resultPage.getTotalPages());
     }

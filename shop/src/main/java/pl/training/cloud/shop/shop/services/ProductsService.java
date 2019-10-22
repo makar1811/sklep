@@ -1,6 +1,5 @@
 package pl.training.cloud.shop.shop.services;
 
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,7 +18,7 @@ public class ProductsService {
         productsRepository.saveAndFlush(product);
     }
 
-    public ResultPage<Product> getUsers(int pageNumber, int pageSize) {
+    public ResultPage<Product> getProducts(int pageNumber, int pageSize) {
         Page<Product> productsPage = productsRepository.findAll(PageRequest.of(pageNumber, pageSize));
         return new ResultPage<>(productsPage.getContent(), productsPage.getNumber(), productsPage.getTotalPages());
     }

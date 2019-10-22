@@ -30,3 +30,13 @@ GET http://localhost:8001/products
 Accept: application/json
 
 ###
+
+POST http://localhost:8001/orders
+Accept: application/json
+
+###
+
+GET http://localhost:8001/orders
+Accept: application/json
+
+###
