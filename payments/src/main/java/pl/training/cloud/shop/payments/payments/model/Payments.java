@@ -14,8 +14,8 @@ import javax.persistence.Id;
 @Entity
 public class Payments {
 
-    @Id
-    String paymentId;
     @NonNull
-    double amount;
+    private String paymentId;
+    @NonNull
+    private double amount;
 }
