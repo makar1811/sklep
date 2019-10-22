@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 public class Payments {
 
     @NonNull
-    private String paymentId;
+    private Long paymentId;
     @NonNull
     private double amount;
 }
