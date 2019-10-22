@@ -1,0 +1,32 @@
+POST http://localhost:8001/products
+Content-Type: application/json
+
+{"name":  "Pepsi", "price": 4, "amount":  10}
+
+###
+
+POST http://localhost:8001/products
+Content-Type: application/json
+
+{"name":  "Woda", "price": 2, "amount":  14}
+
+###
+
+POST http://localhost:8001/products
+Content-Type: application/json
+
+{"name":  "Herbata", "price": 12, "amount":  7}
+
+###
+
+POST http://localhost:8001/products
+Content-Type: application/json
+
+{"name":  "Kawa", "price": 8, "amount":  9}
+
+###
+
+GET http://localhost:8001/products
+Accept: application/json
+
+###
