@@ -1,0 +1,11 @@
+POST http://localhost:8000/payments/payments
+Content-Type: application/json
+
+{"name":  "training-test"}
+
+###
+
+GET http://localhost:8080/departments/departments/1
+Content-Type: application/json
+
+###

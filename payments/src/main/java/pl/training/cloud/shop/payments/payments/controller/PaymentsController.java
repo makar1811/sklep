@@ -26,10 +26,8 @@ public class PaymentsController {
     private UriBuilder uriBuilder = new UriBuilder();
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity createPayment(@RequestBody PaymentsDto paymentsDto) {
-        Payments payments = paymentsService.addPayment(dtoToModel(paymentsDto));
-        URI newDepartmentUri = uriBuilder.requestUriWithId(payments.getPaymentId());
-        return ResponseEntity.created(newDepartmentUri).body(modelToDto(payments));
+    public void createPayment(@RequestBody PaymentsDto paymentsDto) {
+        paymentsService.addPayment(dtoToModel(paymentsDto));
     }
 
     private PaymentsDto modelToDto(Payments payments) {

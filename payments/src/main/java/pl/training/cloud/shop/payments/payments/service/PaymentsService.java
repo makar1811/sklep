@@ -19,7 +19,7 @@ public class PaymentsService {
 
     public Payments addPayment(Payments payments) {
         log.info("Sending payment..");
-        Message<String> message = MessageBuilder.withPayload("payments-change").build();
+        Message<Payments> message = MessageBuilder.withPayload(payments).build();
         source.output()
                 .send(message);
         return payments;
