@@ -15,7 +15,8 @@ public class Order {
     @Id
     private Long id;
     private String orderId;
-    private Integer price;
+    private Double amount;
+    private Double amountPaid;
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
