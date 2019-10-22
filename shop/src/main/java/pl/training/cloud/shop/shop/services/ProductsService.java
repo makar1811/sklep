@@ -18,6 +18,10 @@ public class ProductsService {
         productsRepository.saveAndFlush(product);
     }
 
+    public Product getProductByName(String name) {
+        return productsRepository.findByName(name);
+    }
+
     public ResultPage<Product> getProducts(int pageNumber, int pageSize) {
         Page<Product> productsPage = productsRepository.findAll(PageRequest.of(pageNumber, pageSize));
         return new ResultPage<>(productsPage.getContent(), productsPage.getNumber(), productsPage.getTotalPages());
