@@ -5,13 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
 public class Payments {
 
     @NonNull
