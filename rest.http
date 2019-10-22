@@ -1,28 +1,28 @@
 POST http://localhost:8001/products
 Content-Type: application/json
 
-{"name":  "Pepsi", "price": 4, "amount":  10}
+{"name":  "Pepsi", "price": 4.0, "amount":  10}
 
 ###
 
 POST http://localhost:8001/products
 Content-Type: application/json
 
-{"name":  "Woda", "price": 2, "amount":  14}
+{"name":  "Woda", "price": 2.0, "amount":  14}
 
 ###
 
 POST http://localhost:8001/products
 Content-Type: application/json
 
-{"name":  "Herbata", "price": 12, "amount":  7}
+{"name":  "Herbata", "price": 12.0, "amount":  7}
 
 ###
 
 POST http://localhost:8001/products
 Content-Type: application/json
 
-{"name":  "Kawa", "price": 8, "amount":  9}
+{"name":  "Kawa", "price": 8.0, "amount":  9}
 
 ###
 
@@ -41,7 +41,7 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8001/products
+POST http://localhost:8001/cards
 Content-Type: application/json
 
 {"orderId":  "TODO", "productName": "Kawa"}

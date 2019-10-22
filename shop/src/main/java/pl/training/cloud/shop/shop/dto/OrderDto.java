@@ -10,7 +10,7 @@ public class OrderDto {
 
     private String orderId;
     private OrderStatus orderStatus;
-    private Integer price;
+    private Double amount;
 
     private List<ProductDto> products;
 }

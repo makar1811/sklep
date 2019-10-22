@@ -17,7 +17,7 @@ public class CardsController {
     private final CardService cardService;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity createUser(@RequestBody AddToCartDto addToCartDto) {
+    public ResponseEntity addProductToCart(@RequestBody AddToCartDto addToCartDto) {
         cardService.addProduct(addToCartDto.getOrderId(), addToCartDto.getProductName());
         return ResponseEntity.accepted().build();
     }

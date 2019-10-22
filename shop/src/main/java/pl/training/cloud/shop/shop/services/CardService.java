@@ -20,7 +20,7 @@ public class CardService {
         Product product = productsService.getProductByName(productName);
 
         order.getProducts().add(product);
-        product.decrementAmount();
+        product.decrementQuantity();
     }
 
 }

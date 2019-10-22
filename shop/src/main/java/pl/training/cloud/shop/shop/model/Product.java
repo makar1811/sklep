@@ -14,10 +14,10 @@ public class Product {
     @Id
     private Long id;
     private String name;
-    private Integer price;
-    private Integer amount;
+    private Double price;
+    private Integer quantity;
 
-    public void decrementAmount() {
-        amount--;
+    public void decrementQuantity() {
+        quantity--;
     }
 }
