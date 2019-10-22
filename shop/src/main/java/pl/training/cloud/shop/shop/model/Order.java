@@ -1,9 +1,10 @@
 package pl.training.cloud.shop.shop.model;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,4 +18,7 @@ public class Order {
     private Integer price;
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
+
+    @ManyToMany
+    private List<Product> products = new ArrayList<>();
 }

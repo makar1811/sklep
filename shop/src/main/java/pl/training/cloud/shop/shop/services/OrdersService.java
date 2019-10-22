@@ -20,9 +20,13 @@ public class OrdersService {
     public Order createOrder() {
         Order order = new Order();
         order.setOrderId(UUID.randomUUID().toString());
-        order.setOrderStatus(OrderStatus.CREATED);
+        order.setOrderStatus(OrderStatus.IN_PROGRESS);
         ordersRepository.saveAndFlush(order);
         return order;
+    }
+
+    public Order getOrderByOrderId(String orderId) {
+        return ordersRepository.findByOrderId(orderId);
     }
 
     public ResultPage<Order> getOrders(int pageNumber, int pageSize) {

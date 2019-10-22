@@ -16,4 +16,8 @@ public class Product {
     private String name;
     private Integer price;
     private Integer amount;
+
+    public void decrementAmount() {
+        amount--;
+    }
 }
