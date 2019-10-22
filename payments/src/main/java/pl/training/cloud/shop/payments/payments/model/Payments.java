@@ -9,9 +9,9 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Payments {
-
+    
     @NonNull
-    private Long paymentId;
+    private String orderId;
     @NonNull
     private double amount;
 }
