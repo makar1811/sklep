@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: shop
+  cloud:
+    config:
+      label: develop
+      uri: http://localhost:8888

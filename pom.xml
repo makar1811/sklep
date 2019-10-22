@@ -15,6 +15,7 @@
 	<modules>
 		<module>configuration</module>
 		<module>discovery</module>
+		<module>shop</module>
 	</modules>
 
 </project>
