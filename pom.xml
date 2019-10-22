@@ -16,6 +16,7 @@
 		<module>configuration</module>
 		<module>discovery</module>
 		<module>shop</module>
+		<module>payments</module>
 	</modules>
 
 </project>

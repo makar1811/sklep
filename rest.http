@@ -1,21 +1,7 @@
 POST http://localhost:8001/products
 Content-Type: application/json
 
-{"name":  "Pepsi", "price": 4.0, "quantity":  10}
-
-###
-
-POST http://localhost:8001/products
-Content-Type: application/json
-
-{"name":  "Woda", "price": 2.0, "quantity":  14}
-
-###
-
-POST http://localhost:8001/products
-Content-Type: application/json
-
-{"name":  "Herbata", "price": 12.0, "quantity":  7}
+{"name":  "Pepsi", "price": 5.0, "quantity":  10}
 
 ###
 
@@ -44,6 +30,27 @@ Accept: application/json
 POST http://localhost:8001/cards
 Content-Type: application/json
 
-{"orderId":  "TODO", "productName": "Kawa"}
+{"orderId":  "07994e40-e89e-47bc-bdae-400aaba149ed", "productName": "Kawa"}
+
+###
+
+POST http://localhost:8001/cards
+Content-Type: application/json
+
+{"orderId":  "07994e40-e89e-47bc-bdae-400aaba149ed", "productName": "Pepsi"}
+
+###
+
+POST http://localhost:8000/payments
+Content-Type: application/json
+
+{"orderId":  "07994e40-e89e-47bc-bdae-400aaba149ed", "amount": 12.0}
+
+###
+
+POST http://localhost:8000/payments
+Content-Type: application/json
+
+{"orderId":  "07994e40-e89e-47bc-bdae-400aaba149ed", "amount": 1.0}
 
 ###

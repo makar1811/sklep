@@ -12,6 +12,7 @@ import pl.training.cloud.shop.shop.model.OrderStatus;
 import pl.training.cloud.shop.shop.model.ResultPage;
 import pl.training.cloud.shop.shop.repository.OrdersRepository;
 
+import javax.transaction.Transactional;
 import java.util.UUID;
 
 @Service
@@ -38,10 +39,11 @@ public class OrdersService {
     }
 
     @StreamListener(Sink.INPUT)
+    @Transactional
     public void onPaymentReception(PaymentDto payment) {
         Order order = getOrderByOrderId(payment.getOrderId());
 
-        order.setAmountPaid((order.getAmount() != null ? order.getAmountPaid() : 0) + payment.getAmount());
+        order.setAmountPaid((order.getAmountPaid() != null ? order.getAmountPaid() : 0) + payment.getAmount());
         if (order.getAmount() <= order.getAmountPaid()) {
             order.setOrderStatus(OrderStatus.FINISHED);
         }

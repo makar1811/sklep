@@ -11,6 +11,7 @@ public class OrderDto {
     private String orderId;
     private OrderStatus orderStatus;
     private Double amount;
+    private Double amountPaid;
 
     private List<ProductDto> products;
 }
